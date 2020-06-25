@@ -2,7 +2,7 @@
 $(document).ready(function() {
     
     // Variables
-    const production = false;
+    const debugMode = true;
     var currentDay = moment().format("MMMM Do, YYYY");
     var timeOfDay = moment().format("k");
     var mornOrNight = moment().format("A");
@@ -19,20 +19,20 @@ $(document).ready(function() {
 
     // Sets the colors on the divs based on the current hour
     $(".description").each(function() {
-        if($(this).attr('data-time') < timeOfDay) {
+        if(( parseInt($(this).attr('data-time')) ) < timeOfDay) {
             $(this).addClass("past");
         };
-        if($(this).attr('data-time') == timeOfDay) {
+        if(( parseInt($(this).attr('data-time')) ) == timeOfDay) {
             $(this).addClass("present");
         };
-        if($(this).attr('data-time') > timeOfDay) {
+        if(( parseInt($(this).attr('data-time')) ) > timeOfDay) {
             $(this).addClass("future");
         };
     });
 
     // If production mode is false, then it console.logs all variables out.
-    if (!production) {
-        console.log("Production Mode? " + production)
+    if (debugMode) {
+        console.log("Debug Mode Enabled? " + debugMode)
         console.log("Todays Date: " + currentDay)
         console.log("Current Time: " + timeOfDay + " " + mornOrNight)
         console.log("Minute of Hour: " + minuteOfHour);
