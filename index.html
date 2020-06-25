@@ -19,16 +19,57 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="time-block present"></div>
+      <table>
+        <tr>
+          <td class="time-block hour">9 AM</td>
+          <td class="description am" data-time="9"><textarea></textarea></td>
+          <td><button class="saveBtn" data-id="9"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">10 AM</td>
+          <td class="description am" data-time="10"><textarea></textarea></td>
+          <td><button class="saveBtn" data-id="10"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">11 AM</td>
+          <td class="description am" data-time="11"><textarea></textarea></td>
+          <td><button class="saveBtn" data-id="11"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">12 PM</td>
+          <td class="description pm" data-time="12"><textarea></textarea></td>
+          <td><button class="saveBtn"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">1 PM</td>
+          <td class="description pm" data-time="13"><textarea></textarea></td>
+          <td><button class="saveBtn"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">2 PM</td>
+          <td class="description pm" data-time="14"><textarea></textarea></td>
+          <td><button class="saveBtn"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">3 PM</td>
+          <td class="description pm" data-time="15"><textarea></textarea></td>
+          <td><button class="saveBtn"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">4 PM</td>
+          <td class="description pm" data-time="16"><textarea></textarea></td>
+          <td><button class="saveBtn"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+        <tr>
+          <td class="time-block hour">5 PM</td>
+          <td class="description pm" data-time="17"><textarea></textarea></td>
+          <td><button class="saveBtn"><i class="far fa-save fa-2x"></i></button></td>
+        </tr>
+      </table>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script>
-      // Creating Date and Time
-      var now = moment();
-      $("#currentDay").val(now);
-
-    </script>
+    <script src="script.js"></script>
     
   </body>
 </html>
