@@ -13,6 +13,7 @@ $(document).ready(function() {
     var storage = localStorage.getItem("storedAgendaItems");
 
 
+
     // Sets the current day to display on the webpage.
     $("#currentDay").text(currentDay);
 
@@ -29,6 +30,16 @@ $(document).ready(function() {
             $(this).addClass("future");
         };
     });
+
+    $(document).on("click", "i", function(event) {
+        event.preventDefault();
+
+        if (debugMode) { console.log($(this))};
+
+        console.log($(this).prev("td").children().text(JSON.parse));
+
+        localStorage.setItem("storedAgendaItems", JSON.stringify(agendaItems));
+    })
 
     // If production mode is false, then it console.logs all variables out.
     if (debugMode) {
