@@ -76,6 +76,8 @@ $(document).ready(function() {
     var timeTilNextHour = 60 - minuteOfHour;
     var milleseconds = timeTilNextHour * 60 * 1000;
 
+    timeOfDay = "12";
+
     // Sets the current day to display on the webpage.
     $("#currentDay").text(currentDay);
 
